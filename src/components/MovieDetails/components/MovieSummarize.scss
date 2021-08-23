@@ -1,0 +1,133 @@
+.MovieSummarize {
+    padding: 2rem 0rem;
+    background-position: center 50px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 510px;
+    height: auto;
+    box-sizing: border-box;
+    position: relative;
+
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image: linear-gradient(to right, rgba(4.71%, 3.92%, 4.31%, 1.00) 150px, rgba(4.71%, 3.92%, 4.31%, 0.84) 100%);
+        height: 100%;
+        width: 100%;
+    }
+
+
+    .info-layout {
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+
+        .poster {
+            display: block;
+            min-width: 300px;
+            width: 300px;
+            height: 450px;
+            position: relative;
+            top: 0;
+            left: 0;
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+
+            }
+        }
+
+        .movie-info {
+            display: flex;
+            flex: 1 1 60%;
+            flex-direction: column;
+            align-items: flex-start;
+            align-content: center;
+            box-sizing: border-box;
+            padding-left: 40px;
+            padding-top: 32px;
+            padding-bottom: 32px;
+
+            i {
+                font-size: 14px !important;
+            }
+
+            .title {
+                font-weight: 700;
+
+                .date {
+                    font-weight: normal;
+                }
+            }
+
+            .genres {
+                flex: 1 1 100%;
+                display: flex;
+                align-items: center;
+                font-size: 16px;
+                margin: 0px;
+                padding: 0rem 1rem;
+
+                li {
+                    position: relative;
+                    display: block;
+                    margin: 0px 4px;
+                }
+
+            }
+
+            .meta {
+                display: flex;
+                justify-content: flex-start;
+                flex-wrap: wrap;
+
+                div {
+                    flex: 1 1 30%
+                }
+            }
+        }
+
+    }
+
+    @media (max-width:900px) {
+        .info-layout {
+            justify-content: center;
+
+            .poster {
+                min-width: 100px !important;
+                width: 120px !important;
+                height: auto !important;
+            }
+
+            .movie-info {
+                flex: 1 1 100%;
+                padding-left: 0px;
+                padding-top: 16px;
+                padding-bottom: 16px;
+
+                .title {
+                    font-weight: 700;
+                    font-size: 22px;
+
+                    .date {
+                        font-weight: normal;
+                    }
+                }
+
+                .genres {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+
+.MovieSummarize * {
+    z-index: 1;
+
+}

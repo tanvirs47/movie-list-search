@@ -1,0 +1,15 @@
+.MovieDetails {
+    height: 100%;
+    overflow-y: auto;
+    color: #fff !important;
+
+}
+
+.error {
+    text-align: center;
+    padding: 2rem 1rem;
+    color: #fff !important;
+    span{
+        font-style: italic;
+    }
+}
